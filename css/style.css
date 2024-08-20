@@ -1,0 +1,329 @@
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 100;
+    font-style: italic;
+    color: red;
+}
+
+
+header{
+ background-color: rgb(203, 213, 20);
+ margin:  20px;
+ padding: 20px;
+ position: sticky;
+ top: 0;
+ z-index: 1;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ 
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header h2 {
+    font-size: 30px;
+    color: blue;
+}
+header nav ul{
+    
+    list-style: none;
+    display: flex;
+
+}
+header nav ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+head nav ul li a{
+    text-decoration: line-through;
+    color: black;
+}
+/** clases */
+.hero h2{
+    color: red;
+}
+.bienvenidos h2{
+    color: chartreuse;
+}
+.preferidos h2{
+    color: darkcyan;
+}
+
+header nav ul li a :hover{
+    color: darkred;
+
+}
+    
+
+.hero{
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    background-image: url(../img/logo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2{
+    font-size: 50px;
+    border: 1px solid white;
+    display: inline-block;
+    padding: 15px;
+}
+
+.hero p{
+
+    font-size: 20px;
+    margin: 20px;
+    width: 50%;
+}
+.hero a{
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+
+}
+.hero a :hover{
+        background-color: darkred;
+}
+.bienvenidos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+
+}
+.bienvenidos div{
+    width: 50%;
+
+}
+.bienvenidos div h2{
+    font-size: 50px;
+}
+
+.bienvenidos img{
+    width: 400px;
+    height: 500px;
+}
+.preferidos h2{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.preferidos .preferidos-contenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.preferidos  .preferidos-contenedor div{
+    width: 300px;
+    height: 350px;
+    border: 2px solid gray;
+    margin: 20px ;
+    text-align: center;
+    display: inline-block
+}
+
+.preferidos div img{
+    width: 100%;
+}
+.preferidos div h2{
+    margin-bottom: 20px;
+}
+
+.preferidos div a{
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+}
+.preferidos div a :hover{
+    background-color: darkred;
+}
+
+.grid-galeria{
+    margin: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 15px;
+}
+
+.grid-galeria div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.paragua{
+    grid-column: span 2;
+}
+.sonic{
+    grid-row: span 2;
+}
+.mochila{
+    grid-row: span 2;
+}
+.grid-item{
+    position: relative;
+}
+.grid-item h3{
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 5px;
+}
+.whatsapp{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+.whatsapp a img{
+    width: 70px;
+}
+.hero a{
+    border: 2px solid yellow;
+}
+footer{
+    background-color: coral;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+
+}
+footer .footer-contenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer h2{
+    color: red;
+    font-size: 60px;
+}
+footer div a img{
+    width: 50px;
+    height: 50px;
+}
+footer .footer-derechos{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+@media screen and ( max-width:974px){
+    
+    }
+
+    
+@media screen and (max-width:910px){
+    .hero h2{
+        font-size: 40px;
+     }
+     .hero p{
+        font-size: 18px;
+     }
+     .hero a{
+        font-size: 18px;
+     }
+      
+}
+@media  screen and (max-width:824px) {
+    .grid-galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 220px;
+
+    }
+    .grid-item{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .sonic{
+        grid-column: span 2;
+    }
+    
+}
+
+ @media screen and (max-width:686px) {
+     header{
+        flex-direction: column;
+     }
+     .bienvenidos{
+        flex-direction: column;
+     }
+     .bienvenidos div {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+     }
+ }
+
+ @media screen and (max-width:527px) {
+    .hero p{
+        display: none;
+    }
+    .hero h2{
+        margin: 10px;
+    }
+ } 
+
+ @media screen and (max-width:494px){
+    .grid-galeria{
+        grid-template-columns:  1fr;
+
+    }
+    .grid-item{
+        grid-column: span 1;
+    }
+    .sonic{
+        grid-column: span 2;
+    }
+ }
+
+ @media screen and (max-width: 460px){
+    header nav ul{
+        flex-direction: column;
+    }
+    header nav ul li a{
+        font-size: 12px;
+        
+    }
+
+    header{
+        position: static;
+    }
+    header h1{
+        font-size: 40px;
+    }
+ }
+ @media screen and ( max-width:397px){
+    .hero h2{
+        font-size: 30px;
+    }
+ }
+    
+ 
