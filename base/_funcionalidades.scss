@@ -1,0 +1,21 @@
+// * VARIABLES 
+$color-principal: yellow;
+$color-secundario: black ;
+
+// * LISTAS
+$colores: red, green, blue;
+$font: 10px, 10px, 10px, 10px;
+
+h1{
+    color: nth($colores, 2 );
+    font-size: nth($font, 4 );
+}
+
+// * OPERACIONES
+// * + - */
+$ancho: 250px;
+img{
+    width: $ancho / 2;
+}
+
+// * MAPAS

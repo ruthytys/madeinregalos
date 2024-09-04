@@ -1,0 +1,34 @@
+header{
+    background-color: $color-principal;
+    margin:  20px;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+   }
+   body{
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   header h2 {
+       font-size: 30px;
+       color: blue;
+   }
+   header nav ul{
+       
+       list-style: none;
+       display: flex;
+   
+   }
+   header nav ul li{
+       display: inline-block;
+       margin-right: 10px;
+   }
+   
+   head nav ul li a{
+       text-decoration: line-through;
+       color: $color-secundario;
+   }
